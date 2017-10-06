@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+body {
+  font-size: 10pt;
+}
+
+.main-center-div {
+  width:60%;
+  margin-left:20%;
+  background-color: #ffffff;
+  padding: 15px;
+  min-height: 100vh;
+}

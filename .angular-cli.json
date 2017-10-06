@@ -9,7 +9,11 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "crit-spell.json",
+        "crit-weapon.json",
+        "fumble-weapon.json",
+        "fumble-spell.json"
       ],
       "index": "index.html",
       "main": "main.ts",

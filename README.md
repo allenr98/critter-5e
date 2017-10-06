@@ -8,6 +8,10 @@ website.
 
 http://www.critter-5e.com/
 
+# GitHub Repo
+
+https://github.com/allenr98/critter-5e 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

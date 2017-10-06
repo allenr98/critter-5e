@@ -1,20 +1,105 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="main-center-div">
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+    Based on the excellent D&D Fifth Edition critical success and failure charts by <a
+    href="http://www.questionablyqualified.com/dungeons-and-dragons/dnd-5e-crit-confirmed-critical-hit-charts-and-fumble-charts">Questionably
+    Qualified</a>.
+  </div>
+  <div id="allTheWords" class="collapse in" style="margin-top: 18px;">
+    <div>
+      <h2 style="margin-top: 18px;">The RAW(Rules as Written) Critical Hit Rules</h2>
+      <p>All critical hits and misses still follow the original 5e rules of rolling another set of the attacks damage
+        dice. This includes rolling extra dice for abilities that are a part of the attack such as damage from sneak
+        attack, hex, or the initial strike of green flame blade.</p>
+      <h2 style="margin-top: 18px;">Where The Tables Fit In</h2>
+      <p>These tables simply contain a list of additional effects that take place on top of the existing critical roll
+        rules.There are individual tables below for both weapon attacks and spell attacks because let's be honest, there
+        is a difference between missing with a bow and missing with a scorching ray.</p>
+    </div>
+  </div>
+  <div class="small" style="text-align: center;">
+    <a href="#" data-toggle="collapse" data-target="#allTheWords">Show/Hide App Info</a>
+  </div>
+  <div style="text-align: center;" class="form-container">
+    <form id="critForm" [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)"
+          class="form-horizontal" method="post" action="">
+      <div class="form-group">
+        <h2 style="margin-top: 18px;">Choose the type of attack:</h2>
+        <div data-toggle="buttons">
+          <label class="btn btn-default btn-circle btn-lg active" (click)="selectAttackType('melee')"
+                 data-toggle="tooltip" title="Melee Attack">
+            <input type="radio" name="selectedType" value="melee">
+            <i class="fa fa-gavel"></i>
+          </label>
+          <label class="btn btn-default btn-circle btn-lg" (click)="selectAttackType('ranged')"
+                 data-toggle="tooltip" title="Ranged Attack">
+            <input type="radio" name="selectedType" value="ranged">
+            <i class="fa fa-crosshairs"></i>
+          </label>
+          <label class="btn btn-default btn-circle btn-lg" (click)="selectAttackType('spell')"
+                 data-toggle="tooltip" title="Spell Attack">
+            <input type="radio" name="selectedType" value="spell">
+            <i class="fa fa-bolt"></i>
+          </label>
+        </div>
+      </div>
+      <div class="row form-group">
+        <button type="submit" class="btn btn-primary btn-default form-control result-text" (click)="selectFunction('critical')">Roll Critical Hit!</button>
+        <button type="submit" class="btn btn-secondary form-control result-text" (click)="selectFunction('fumble')">Roll Fumble!</button>
+      </div>
+      <div *ngIf="result?.description.length > 0" style="border-top: solid 1px;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12" style="margin-top: 18px;">
+              <div class="panel panel-default panel-primary">
+                <div class="panel-heading" style="text-align: center;">
+                  {{ selectedType }} - {{ selectedFunction }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 result-text flex-first">
+                <div class="panel panel-default panel-info">
+                  <div class="panel-heading" style="text-align: center;">
+                    <label>Roll</label>
+                  </div>
+                  <div class="panel-body" style="text-align: center;">
+                    {{ roll }}
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 result-text flex-column">
+              <div class="panel panel-default panel-info">
+                <div class="panel-heading" style="text-align: center;">
+                  <label>Description</label>
+                </div>
+                <div class="panel-body" style="text-align: center;">
+                  {{ result.description }}
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 result-text flex-column">
+              <div class="panel panel-default panel-info">
+                <div class="panel-heading" style="text-align: center;">
+                  <label>Effect</label>
+                </div>
+                <div class="panel-body">
+                  {{ result.effect }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 result-text flex-last">
+              <button type="button" class="btn btn-outline-danger form-control result-text" (click)="clearResults()">Clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

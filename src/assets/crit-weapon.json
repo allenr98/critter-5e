@@ -1,0 +1,92 @@
+[
+  {
+    "roll": "1-1",
+    "description": "You feel accomplished, but nothing remarkable happens.",
+    "effect": "Regular critical hit."
+  },
+  {
+    "roll": "2-5",
+    "description": "You feel it is imperative to press the advantage no matter the cost.",
+    "effect": "You can choose to gain advantage on all attacks against your target until the end of your next turn, but if you do all enemies have advantage on their attack rolls against you until the end of your next turn."
+  },
+  {
+    "roll": "6-9",
+    "description": "You feel it is imperative to press the advantage, but maintain awareness of your surroundings.",
+    "effect": "You can choose to gain advantage on all attacks against your target next turn, your target has advantage on their attack rolls against you until the end of your next turn."
+  },
+  {
+    "roll": "10-14",
+    "description": "You know how to press the advantage.",
+    "effect": "You gain advantage on all attacks against your target until the end of your next turn."
+  },
+  {
+    "roll": "15-19",
+    "description": "As you are fighting, you notice an effective route to escape danger.",
+    "effect": "You are able to use the disengage action after your attack."
+  },
+  {
+    "roll": "20-24",
+    "description": "You feel the eb and flow of the battle, and know where to make your next move.",
+    "effect": "After your turn you move to the top of the initiative order."
+  },
+  {
+    "roll": "25-29",
+    "description": "You begin to recognize patterns in your opponents fighting technique.",
+    "effect": "You gain +2 to your AC against your target, and advantage on all savings throws from effects originating from your target until your next turn."
+  },
+  {
+    "roll": "30-39",
+    "description": "You are able to maneuver towards your opponent while attacking, and attempt to harass them.",
+    "effect": "After your attack you can choose to attempt to grapple your opponent if you have a free hand, or attempt to shove your opponent if both hands are in use."
+  },
+  {
+    "roll": "40-49",
+    "description": "You are able to maneuver towards your opponent while attacking and harass them.",
+    "effect": "After your attack you can choose to automatically succeed in grappling your opponent if you have a free hand, or shoving your opponent if both hands are in use."
+  },
+  {
+    "roll": "50-59",
+    "description": "You attempt to disarm your opponent.",
+    "effect": "You are able to take the disarm action after your attack"
+  },
+  {
+    "roll": "60-69",
+    "description": "You kick your target's weapon out of their hands.",
+    "effect": "You are able to take the disarm action after your attack, and can steal your opponents weapon if you have a free hand. Otherwise you can knock it up to 20 feet away."
+  },
+  {
+    "roll": "70-74",
+    "description": "Your senses heighten and you become aware of threats around the battlefield.",
+    "effect": "You are able to use the dodge action after your attack."
+  },
+  {
+    "roll": "75-79",
+    "description": "Your attack knocks your target over.",
+    "effect": "Your target is knocked prone."
+  },
+  {
+    "roll": "80-84",
+    "description": "Your strike surprises your opponent.",
+    "effect": "Your target is surprised until the end of their next turn."
+  },
+  {
+    "roll": "85-89",
+    "description": "You strike with great force.",
+    "effect": "Roll an additional set of damage dice above and beyond your normal critical roll."
+  },
+  {
+    "roll": "90-94",
+    "description": "You strike with extreme force.",
+    "effect": "Roll an additional set of damage dice above and beyond your normal critical roll, and the target suffers one unit of exhaustion."
+  },
+  {
+    "roll": "95-99",
+    "description": "You strike with debilitating force.",
+    "effect": "Roll an additional set of damage dice above and beyond your normal critical roll, and the target suffers a permanent injury chosen by the DM. The permanent injury can be healed with extended rest of a length determined by the DM, but the attack leaves a scar."
+  },
+  {
+    "roll": "100-100",
+    "description": "You strike with devastating force.",
+    "effect": "Roll an additional set of damage dice above and beyond your normal critical roll, and the target suffers 1 unit of exhaustion, and the target suffers a permanent injury chosen by the DM. The permanent injury can be healed with extended rest of a length determined by the DM, but the attack leaves a scar."
+  }
+]

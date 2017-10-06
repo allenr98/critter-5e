@@ -1,0 +1,87 @@
+[
+  {
+    "roll": "1-1",
+    "description": "You feel accomplished, but nothing remarkable happens.",
+    "effect": "Regular spell critical hit."
+  },
+  {
+    "roll": "2-5",
+    "description": "You feel it is imperative to press the advantage no matter the cost.",
+    "effect": "You can choose to gain advantage on your next attack roll against your target, but all enemies have advantage on their attack rolls against you until the end of your next turn."
+  },
+  {
+    "roll": "6-9",
+    "description": "You feel it is imperative to press the advantage, but maintain awareness of your surroundings.",
+    "effect": "You can choose to gain advantage on your next attack roll against your target, your target has advantage on their attack rolls against you until the end of your next turn."
+  },
+  {
+    "roll": "10-14",
+    "description": "As you are fighting, you notice an effective route to escape danger.",
+    "effect": "You are able to use the disengage action after your attack."
+  },
+  {
+    "roll": "15-19",
+    "description": "You feel the eb and flow of the battle, and know where to make your next move.",
+    "effect": "After your turn you move to the top of the initiative order."
+  },
+  {
+    "roll": "20-29",
+    "description": "Your spell cripples your opponent.",
+    "effect": "Your target's movement speed is cut in half for their next 2 turns."
+  },
+  {
+    "roll": "30-39",
+    "description": "Your spell attack knocks your target over.",
+    "effect": "Your target is knocked prone."
+  },
+  {
+    "roll": "40-49",
+    "description": "The light from your spell flashes near your target's eyes",
+    "effect": "Your target is blinded until the end of their next turn."
+  },
+  {
+    "roll": "50-59",
+    "description": "You blast the targets weapons out of their hands.",
+    "effect": "Your target's weapon is flung 1d6*5 feet away in a random direction."
+  },
+  {
+    "roll": "60-69",
+    "description": "The sight of your magic fills the target's heart with fear.",
+    "effect": "Your target is frightened by you until you stop casting magic. You are able to discern the source of your targets fear."
+  },
+  {
+    "roll": "70-74",
+    "description": "The force from your spell stuns your opponent.",
+    "effect": "Your target is incapacitated until the end of their next turn."
+  },
+  {
+    "roll": "75-79",
+    "description": "Your spell is incidentally infused with fey energy.",
+    "effect": "Roll 10d8. If your targets current health is lower than the number rolled they fall asleep for 1 minute."
+  },
+  {
+    "roll": "80-84",
+    "description": "Your spells strike surprises your opponent.",
+    "effect": "Your target is surprised until the end of their next turn."
+  },
+  {
+    "roll": "85-89",
+    "description": "Your spell strikes with great force.",
+    "effect": "Roll an additional set of spell damage dice above and beyond your normal critical roll."
+  },
+  {
+    "roll": "90-94",
+    "description": "Your spell strikes with extreme force.",
+    "effect": "Roll an additional set of spell damage dice above and beyond your normal critical roll, and the target suffers one unit of exhaustion."
+  },
+  {
+    "roll": "96-99",
+    "description": "Your spell strikes with debilitating force.",
+    "effect": "Roll an additional set of spell damage dice above and beyond your normal critical roll, and the target suffers a permanent injury chose by the DM. The permanent injury can be healed with extended rest of a length determined by the DM, but the attack leaves a scar."
+  },
+  {
+    "roll": "100-100",
+    "description": "Your spell strikes with devastating force.",
+    "effect": "Roll an additional set of spell damage dice above and beyond your normal critical roll, and the target suffers 1 unit of exhaustion, and the target suffers a permanent injury chose by the DM. The permanent injury can be healed with extended rest of a length determined by the DM, but the attack leaves a scar."
+  }
+]
