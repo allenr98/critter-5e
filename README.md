@@ -1,6 +1,12 @@
 # Critter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.0.
+This is a super-simple Angular 4 single-page app created using the 5th Edition critical/fumble rules found on the
+[QuestionablyQualified](http://www.questionablyqualified.com/dungeons-and-dragons/dnd-5e-crit-confirmed-critical-hit-charts-and-fumble-charts)
+website.
+
+# Accessing Critter 5e on the Web
+
+http://www.critter-5e.com/
 
 ## Development server
 
