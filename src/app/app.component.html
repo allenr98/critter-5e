@@ -18,13 +18,16 @@
       <p>These tables simply contain a list of additional effects that take place on top of the existing critical roll
         rules.There are individual tables below for both weapon attacks and spell attacks because let's be honest, there
         is a difference between missing with a bow and missing with a scorching ray.</p>
+      <p><strong>Optional (but highly recommended) Rule:</strong> Only apply these tables to the first attack roll in
+        an action. This is to prevent the awkward issue where high level heroes of the realm with multiple attack rolls
+        seem to become more incompetent as they level.</p>
     </div>
   </div>
   <div class="small" style="text-align: center;">
     <a href="#" data-toggle="collapse" data-target="#allTheWords">Show/Hide App Info</a>
   </div>
   <div style="text-align: center;" class="form-container">
-    <form id="critForm" [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)"
+    <form id="critForm" name="critForm" [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)"
           class="form-horizontal" method="post" action="">
       <div class="form-group">
         <h2 style="margin-top: 18px;">Choose the type of attack:</h2>
@@ -45,6 +48,20 @@
             <i class="fa fa-bolt"></i>
           </label>
         </div>
+      </div>
+      <div class="row form-group border rounded">
+         <span data-toggle="collapse" data-target="#rollEntry" class="btn btn-default col-md-8 vmiddle">Enter Custom Roll</span>
+         <div class="collapse col-md-4" id="rollEntry">
+           <label>What did the player roll?
+           <div class="input-group spinner">
+             <input type="text" class="form-control" [formControl]="customRoll" style="font-size: 18pt; text-align: center;">
+             <div class="input-group-btn-vertical">
+               <span class="btn btn-default" type="button" (click)="increment()"><i class="fa fa-caret-up"></i></span>
+               <span class="btn btn-default" type="button" (click)="decrement()"><i class="fa fa-caret-down"></i></span>
+             </div>
+           </div>
+           </label>
+         </div>
       </div>
       <div class="row form-group">
         <button type="submit" class="btn btn-primary btn-default form-control result-text" (click)="selectFunction('critical')">Roll Critical Hit!</button>

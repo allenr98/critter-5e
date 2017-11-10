@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as critical_data from '../assets/crit-weapon.json';
 import * as fumble_data from '../assets/fumble-weapon.json';
 import * as spell_critical_data from '../assets/crit-spell.json';
@@ -16,6 +16,7 @@ export class AppComponent {
   selectedType: 'melee';
   selectedFunction: 'critical';
   roll;
+  customRoll: 0;
   result;
 
   critWeapon;
@@ -36,6 +37,7 @@ export class AppComponent {
 
     this.rForm = formBuilder.group({
       selectedType: 'melee',
+      customRoll: [0, Validators.compose([Validators.min(1), Validators.max(100)])],
       result: '',
       'validate': ''
     });
@@ -149,5 +151,13 @@ export class AppComponent {
     this.result = {
       'description': ''
     };
+  }
+
+  increment() {
+    this.customRoll += 1;
+  }
+
+  decrement() {
+    this.customRoll -= 1;
   }
 }
